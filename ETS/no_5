@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void print(queue<string> antrian) {
+	if(antrian.empty()) {
+		cout << "Antrian kosong" << endl;
+	}
+	
+	while(!antrian.empty()) {
+		cout << antrian.front() << " ";
+		antrian.pop();
+	}
+}
+
+int main() {
+    queue<string> antrian;
+    
+    cout << "===== ANTRIAN LAYANAN AKADEMIK =====" << endl;
+    cout << endl;
+    
+    antrian.push("A");
+    antrian.push("B");
+    antrian.push("C");
+    cout << "Mahasiswa A, B, dan C memasuki antrian" << endl;
+    
+    cout << "Mahasiswa " << antrian.front() << " sedang dilayani" << endl;
+    antrian.pop();
+    
+    antrian.push("D");
+    cout << "Mahasiswa D memasuki antrian" << endl;
+    
+    cout << "Antrian saat ini: ";
+	print(antrian);
+    
+    return 0;
+}
